@@ -1,0 +1,325 @@
+{
+  "total_requests": 800,
+  "availability": 1.0,
+  "error_rate": 0.0,
+  "latency_p50_ms": 1.6,
+  "latency_p95_ms": 465.06,
+  "latency_p99_ms": 523.44,
+  "fallback_success_rate": 1.0,
+  "cache_hit_rate": 0.74,
+  "circuit_open_count": 21,
+  "recovery_time_ms": 2703.09,
+  "estimated_cost": 0.102304,
+  "estimated_cost_saved": 0.34708,
+  "route_counts": {
+    "fallback:backup:served": 83,
+    "cache_hit:score=1.00": 592,
+    "primary:primary:served": 125
+  },
+  "circuit_transitions": [
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "closed",
+      "to": "open",
+      "reason": "failure_threshold",
+      "ts": 1778647958.745294
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647961.2882788
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647961.4907186
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647963.9605274
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647964.1692195
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647966.689829
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647966.8931894
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647969.396306
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647969.5831852
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647972.0560625
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647972.262614
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647974.7838557
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647974.97566
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647977.447283
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647977.6811173
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647980.167569
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647980.366892
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647982.88437
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647983.1138144
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647985.586567
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647985.820041
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647988.3114004
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647988.5142522
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "open",
+      "to": "half_open",
+      "reason": "reset_timeout_elapsed",
+      "ts": 1778647991.0085428
+    },
+    {
+      "scenario": "primary_timeout_100",
+      "breaker": "primary",
+      "from": "half_open",
+      "to": "open",
+      "reason": "half_open_probe_failed",
+      "ts": 1778647991.2469487
+    }
+  ],
+  "scenarios": {
+    "primary_timeout_100": "pass",
+    "primary_flaky_50": "pass",
+    "cache_stale_candidate": "pass",
+    "all_healthy": "pass"
+  },
+  "scenario_details": {
+    "primary_timeout_100": {
+      "description": "Primary provider fails 100%; backup/cache should keep service available.",
+      "expected": "Primary fails, circuit opens, backup/cache keeps service available.",
+      "observed": "availability=100.00%, cache_hit_rate=70.50%, fallback_successes=59, static_fallbacks=0, circuit_opens=19",
+      "requests": 200,
+      "concurrency": 10,
+      "status": "pass"
+    },
+    "primary_flaky_50": {
+      "description": "Primary provider fails 50%; circuit should open and fallback should absorb failures.",
+      "expected": "Primary intermittently fails; circuit opens/retries and fallback absorbs failures.",
+      "observed": "availability=100.00%, cache_hit_rate=72.00%, fallback_successes=24, static_fallbacks=0, circuit_opens=2",
+      "requests": 200,
+      "concurrency": 10,
+      "status": "pass"
+    },
+    "cache_stale_candidate": {
+      "description": "Low-threshold cache stress test; date-different queries should not false-hit.",
+      "expected": "Similar but date-different queries are rejected as false cache hits.",
+      "observed": "availability=100.00%, cache_hit_rate=79.00%, fallback_successes=0, static_fallbacks=0, circuit_opens=0",
+      "requests": 200,
+      "concurrency": 10,
+      "checked": true,
+      "false_hit_prevented": true,
+      "similarity_score": 0.8143,
+      "false_hit_log_entries": 1,
+      "example": "2024 vs 2026 refund-policy queries must not share a cached answer",
+      "status": "pass"
+    },
+    "all_healthy": {
+      "description": "Baseline run with both providers healthy.",
+      "expected": "Requests should succeed without static fallback.",
+      "observed": "availability=100.00%, cache_hit_rate=74.50%, fallback_successes=0, static_fallbacks=0, circuit_opens=0",
+      "requests": 200,
+      "concurrency": 10,
+      "status": "pass"
+    }
+  },
+  "cache_comparison": {
+    "without_cache": {
+      "latency_p50_ms": 210.15,
+      "latency_p95_ms": 237.43,
+      "estimated_cost": 0.11556,
+      "cache_hit_rate": 0.0
+    },
+    "with_cache": {
+      "latency_p50_ms": 1.54,
+      "latency_p95_ms": 233.71,
+      "estimated_cost": 0.02668,
+      "cache_hit_rate": 0.77
+    },
+    "delta": {
+      "latency_p50_ms": -208.61,
+      "latency_p95_ms": -3.72,
+      "estimated_cost": -0.08888,
+      "cache_hit_rate": 0.77
+    }
+  },
+  "redis_shared_cache": {
+    "backend": "redis",
+    "checked": true,
+    "redis_available": true,
+    "shared_state": true,
+    "score": 1.0,
+    "example_key_count": 1,
+    "example_keys": [
+      "rl:cache:evidence:1ce63c241e59"
+    ],
+    "cli_command": "docker compose exec redis redis-cli KEYS \"rl:cache:*\""
+  },
+  "slo_results": {
+    "Availability": {
+      "target": ">= 99%",
+      "actual": 1.0,
+      "met": true
+    },
+    "Latency P95": {
+      "target": "< 2500 ms",
+      "actual": 465.06,
+      "met": true
+    },
+    "Fallback success rate": {
+      "target": ">= 95%",
+      "actual": 1.0,
+      "met": true
+    },
+    "Cache hit rate": {
+      "target": ">= 10%",
+      "actual": 0.74,
+      "met": true
+    },
+    "Recovery time": {
+      "target": "< 5000 ms",
+      "actual": 2703.09,
+      "met": true
+    }
+  }
+}

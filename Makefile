@@ -13,7 +13,7 @@ run-chaos:
 	python scripts/run_chaos.py --config configs/default.yaml --out reports/metrics.json
 
 report:
-	python scripts/generate_report.py --metrics reports/metrics.json --out reports/final_report.md
+	python scripts/generate_report.py --metrics reports/metrics.json --out reports/final_report.md --config configs/default.yaml
 
 docker-up:
 	docker compose up -d

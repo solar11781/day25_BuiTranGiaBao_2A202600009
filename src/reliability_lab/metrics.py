@@ -20,7 +20,13 @@ class RunMetrics(BaseModel):
     estimated_cost: float = 0.0
     estimated_cost_saved: float = 0.0
     latencies_ms: list[float] = Field(default_factory=list)
+    route_counts: dict[str, int] = Field(default_factory=dict)
+    circuit_transitions: list[dict[str, object]] = Field(default_factory=list)
     scenarios: dict[str, str] = Field(default_factory=dict)
+    scenario_details: dict[str, dict[str, object]] = Field(default_factory=dict)
+    cache_comparison: dict[str, dict[str, object]] = Field(default_factory=dict)
+    redis_shared_cache: dict[str, object] = Field(default_factory=dict)
+    slo_results: dict[str, dict[str, object]] = Field(default_factory=dict)
 
     @property
     def availability(self) -> float:
@@ -37,13 +43,16 @@ class RunMetrics(BaseModel):
     @property
     def fallback_success_rate(self) -> float:
         denom = self.fallback_successes + self.static_fallbacks
-        return self.fallback_successes / denom if denom else 0.0
+        return self.fallback_successes / denom if denom else 1.0
 
     def percentile(self, q: float) -> float:
         return percentile(self.latencies_ms, q)
 
+    def add_route(self, route_reason: str) -> None:
+        self.route_counts[route_reason] = self.route_counts.get(route_reason, 0) + 1
+
     def to_report_dict(self) -> dict[str, object]:
-        return {
+        report: dict[str, object] = {
             "total_requests": self.total_requests,
             "availability": round(self.availability, 4),
             "error_rate": round(self.error_rate, 4),
@@ -53,11 +62,20 @@ class RunMetrics(BaseModel):
             "fallback_success_rate": round(self.fallback_success_rate, 4),
             "cache_hit_rate": round(self.cache_hit_rate, 4),
             "circuit_open_count": self.circuit_open_count,
-            "recovery_time_ms": self.recovery_time_ms,
+            "recovery_time_ms": None
+            if self.recovery_time_ms is None
+            else round(self.recovery_time_ms, 2),
             "estimated_cost": round(self.estimated_cost, 6),
             "estimated_cost_saved": round(self.estimated_cost_saved, 6),
+            "route_counts": self.route_counts,
+            "circuit_transitions": self.circuit_transitions[:25],
             "scenarios": self.scenarios,
+            "scenario_details": self.scenario_details,
+            "cache_comparison": self.cache_comparison,
+            "redis_shared_cache": self.redis_shared_cache,
+            "slo_results": self.slo_results,
         }
+        return report
 
     def write_json(self, path: str | Path) -> None:
         Path(path).parent.mkdir(parents=True, exist_ok=True)
