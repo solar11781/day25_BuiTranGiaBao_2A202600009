@@ -1,5 +1,8 @@
 # Day 10 Lab — Reliability Engineering for Production Agents
 
+**Tên:** Bùi Trần Gia Bảo  
+**Mã HV:** 2A202600009  
+
 Build a production-style reliability layer for an LLM agent gateway. The starter repo is intentionally a skeleton: core architecture, interfaces, tests, metric/report format, and TODO zones are provided; students implement the reliability logic.
 
 ## Learning goals
